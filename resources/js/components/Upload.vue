@@ -16,6 +16,7 @@
   max-width: 400px;
   margin: 0 auto;
   .response {
+    overflow: scroll;
     border: solid 1px #555;
     background-color: #333;
     color: #EEE;

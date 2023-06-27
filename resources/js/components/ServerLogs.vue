@@ -14,7 +14,7 @@
   }
   .response {
     overflow: scroll;
-    padding: 5px 5px 5px 10px;
+    padding: 5px 5px 10px 5px;
     border: solid 1px #555;
     background-color: #333;
     color: #EEE;
