@@ -13,10 +13,11 @@
     font: bold 10px monospace;
   }
   .response {
+    overflow: scroll;
+    padding: 5px 5px 5px 10px;
     border: solid 1px #555;
     background-color: #333;
     color: #EEE;
-    padding: 5px;
   }
 }
 </style>

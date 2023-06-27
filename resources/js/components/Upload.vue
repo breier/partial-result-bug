@@ -59,6 +59,14 @@ export default {
     uploadFile() {
       let formData = new FormData()
       formData.append('image', this.imageFile)
+      formData.append('number', '1234567890asdf')
+      formData.append('name', 'test_image')
+      formData.append('type', this.imageFile.type)
+      formData.append('channel', 'WEB');
+      formData.append('update', false);
+      formData.append('du_id', '4321');
+      formData.append('du_ad', '1234');
+
       axios.post('/api/upload', formData)
         .then(response => {
           if (response.data.error) {
