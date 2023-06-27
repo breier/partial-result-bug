@@ -5,6 +5,9 @@
     <div class="content">
       <upload />
     </div>
+    <div class="server-logs">
+      <server-logs />
+    </div>
   </div>
 </template>
 
@@ -18,12 +21,14 @@ h2 {
 </style>
 
 <script>
+import ServerLogs from './components/ServerLogs.vue'
 import Upload from './components/Upload.vue'
 
 export default {
   name: 'App',
   components: {
-    Upload
+    Upload,
+    ServerLogs,
   }
 }
 </script>

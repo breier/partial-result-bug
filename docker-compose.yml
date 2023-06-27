@@ -2,11 +2,9 @@ version: '3'
 services:
 
   web:
-    image: webdevops/php-apache-dev:8.0
+    image: local/rhubi9:php8
+    build: .
     ports: ['8080:80']
-    environment:
-      PHP_MEMORY_LIMIT: '1G'
-      WEB_DOCUMENT_ROOT: '/app/public'
     working_dir: '/app'
     volumes: ['.:/app:z']
 

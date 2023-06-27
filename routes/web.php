@@ -14,5 +14,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\UploadFile::class, 'index']);
-
-Route::fallback([\App\Http\Controllers\UploadFile::class, 'index']);
