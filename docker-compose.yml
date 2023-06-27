@@ -1,0 +1,24 @@
+version: '3'
+services:
+
+  web:
+    image: webdevops/php-apache-dev:8.0
+    ports: ['8080:80']
+    environment:
+      PHP_MEMORY_LIMIT: '1G'
+      WEB_DOCUMENT_ROOT: '/app/public'
+    working_dir: '/app'
+    volumes: ['.:/app:z']
+
+  mariadb:
+    image: 'mariadb:10.5'
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: 'yes'
+      MARIADB_DATABASE: 'bug-stats'
+      MARIADB_USER: 'bug-stats'
+      MARIADB_PASSWORD: 'bugStats'
+    volumes: ['bugDB:/var/lib/mysql']
+
+volumes:
+  bugDB:
+    driver: local
